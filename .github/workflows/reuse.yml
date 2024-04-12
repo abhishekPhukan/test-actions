@@ -5,6 +5,10 @@ on:
       input1:
         type: string
         required: true
+    outputs:
+      calledoutput:
+        description: just a value sent from called workflow
+        value: "this is a test"
 
 jobs:
   test-job:

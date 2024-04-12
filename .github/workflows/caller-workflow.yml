@@ -2,7 +2,8 @@ name: Caller Workflow
 on:
   push:
 jobs:
-  uses: ./.github/workflows/reuse.yml
-  with:
-    caller_input: "test 123"
+  caller-job:
+    uses: ./.github/workflows/reuse.yml
+    with:
+      input1: "test 123"
     

@@ -2,6 +2,14 @@ name: Caller Workflow
 on:
   push:
 jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add an env variable
+      run: echo "testenv=helloworld" > $GITHUB_ENV
+
+    - name: use env variable set in above step
+      run: echo "${{ env.testenv }}"
   caller-job:
     uses: ./.github/workflows/reuse.yml
     with:

@@ -18,6 +18,7 @@ jobs:
       run: echo "testjoboutput=hellomario"> $GITHUB_OUTPUT
 
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: print output from above job
